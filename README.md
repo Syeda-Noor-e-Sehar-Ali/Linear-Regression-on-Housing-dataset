@@ -1,2 +1,2 @@
 # Linear-Regression-on-Housing-dataset
-Linear Regression is a powerful algorithm for predicting house prices.
+Linear regression is a simple yet powerful algorithm for predicting house prices based on features like size, location, and number of bedrooms. By fitting a linear equation to observed data, it provides clear insights into the relationship between variables. This algorithm is easy to implement, interpret, and computationally efficient, making it suitable for large datasets. Its ability to highlight significant predictors and predict continuous outcomes accurately makes it a valuable tool in real estate market analysis. Additionally, it forms the basis for more complex models, facilitating further data exploration and modeling.
