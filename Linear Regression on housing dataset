@@ -1,0 +1,33 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+%matplotlib inline
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+
+df=pd.read_csv('/content/drive/MyDrive/Semester projects/Semester 5/Semester 5 AI/AI Lab 4/house-price-dataset.csv')
+
+df
+
+plt.scatter(df.News,df.Price,color='red',marker='+')
+
+plt.scatter(df.bedroom,df.Price,color='red',marker='+')
+
+median_bedroom= df.bedroom.median()
+median_bedroom
+df.bedroom = df.bedroom.fillna(median_bedroom)
+
+x=df[['bedroom','age','News']]
+y=df['Price']
+
+x_test,x_train,y_test,y_train=train_test_split(x,y,test_size=0.2,random_state=0)
+
+clf =LinearRegression()
+clf.fit(x_train,y_train)
+
+x_test
+
+clf.predict(x_test)
+
+y_test
+
+clf.score(x_test,y_test)
